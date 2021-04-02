@@ -16,6 +16,7 @@ export default function Home() {
           Get started by editing <code>pages/index.js</code>
         </p>
         <h2>Now I'm trying to use Next.js in here.</h2>
+        <h3>“úX¥¸i...</h3>
 
       </main>
 

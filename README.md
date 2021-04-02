@@ -24,6 +24,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
+ローカルで上のコマンドを打てば [http://localhost:3000](http://localhost:3000) でつながる。
+
+デプロイされているのは https://e99h2121.netlify.app/ 。
+
+
 ### Installation options
 
 **Option one:** One-click deploy
