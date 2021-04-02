@@ -28,6 +28,14 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 デプロイされているのは https://e99h2121.netlify.app/ 。
 
+https://github.com/vercel/next.js/tree/canary/packages/create-next-app
+`npx create-next-app`
+
+cssのために以下実施
+https://medium.com/officialrajdeepsingh/how-to-add-css-in-next-js-3254016d7544
+
+`npm install --save @zeit/next-css`
+
 
 ### Installation options
 
