@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { Planet } from 'react-kawaii'
+import { Cat } from 'react-kawaii'
+import { Ghost } from 'react-kawaii'
 
 export default function Home() {
   return (
@@ -18,10 +21,21 @@ export default function Home() {
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
-        <h2>Now I'm trying to use Next.js in here.</h2>
+        
+        <h2>Now I'm trying several framework here.</h2>
         <h3>日々是精進</h3>
-
         <div className={styles.grid}>
+          <Planet size={90} mood="blissful" color="#FDA7DC" />
+          <Planet size={90} mood="lovestruck" color="#FDA7DC" />
+          <Planet size={90} mood="blissful" color="#FDA7DC" />
+          <Cat size={110} mood="excited" color="#596881" />
+          <Cat size={110} mood="happy" color="#596881" />
+          <Cat size={110} mood="excited" color="#596881" />
+          <Ghost size={100} mood="excited" color="#83D1FB" />
+          <Ghost size={100} mood="happy" color="#83D1FB" />
+          <Ghost size={100} mood="ko" color="#83D1FB" />
+
+
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
