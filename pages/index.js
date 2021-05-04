@@ -4,6 +4,49 @@ import { Planet } from 'react-kawaii'
 import { Cat } from 'react-kawaii'
 import { Ghost } from 'react-kawaii'
 
+import React from 'react';
+import { useListState, randomId } from '@mantine/hooks';
+import { useMantineTheme, Checkbox } from '@mantine/core';
+
+const initialValues = [
+  { label: 'Receive email notifications', checked: false, key: randomId() },
+  { label: 'Receive sms notifications', checked: false, key: randomId() },
+  { label: 'Receive push notifications', checked: false, key: randomId() },
+];
+
+export function IntermediateCheckbox() {
+  const theme = useMantineTheme();
+  const [values, handlers] = useListState(initialValues);
+  const allChecked = values.every((value) => value.checked);
+  const intermediate = values.some((value) => value.checked) && !allChecked;
+
+  const items = values.map((value, index) => (
+    <Checkbox
+      style={{ marginTop: theme.spacing.xs, marginLeft: 33 }}
+      label={value.label}
+      key={value.key}
+      checked={value.checked}
+      onChange={(event) => handlers.setItemProp(index, 'checked', event.currentTarget.checked)}
+    />
+  ));
+
+  return (
+    <div>
+      <Checkbox
+        checked={allChecked}
+        intermediate={intermediate}
+        label="Receive all notifications"
+        onChange={() =>
+          handlers.setState((current) =>
+            current.map((value) => ({ ...value, checked: !allChecked }))
+          )
+        }
+      />
+      {items}
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -17,6 +60,7 @@ export default function Home() {
           Welcome to <a href="https://e99h2121.github.io/">e99h2121</a> and <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <p>also using https://mantine.dev/</p>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
@@ -77,5 +121,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+
   )
 }
