@@ -11,10 +11,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
 
-        <div style={{ color: 'magenta' }}>
-    <Icon glyph="like" size={128} />
-    <Icon glyph="cloud" size={32} />
-  </div>
+    <div style={{ color: 'magenta' }}>
+      <Icon glyph="welcome" size={512} />
+      <Icon glyph="thumbsup" size={258} />
+      <Icon glyph="support" size={128} />
+      <Icon glyph="like" size={128} />
+      <Icon glyph="cloud" size={32} />
+    </div>
 
       <Head>
         <title>Create Next App</title>
