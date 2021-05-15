@@ -4,10 +4,18 @@ import { Planet } from 'react-kawaii'
 import { Cat } from 'react-kawaii'
 import { Ghost } from 'react-kawaii'
 
+import React from 'react'
+import Icon from 'supercons'
 
 export default function Home() {
   return (
     <div className={styles.container}>
+
+        <div style={{ color: 'magenta' }}>
+    <Icon glyph="like" size={128} />
+    <Icon glyph="cloud" size={32} />
+  </div>
+
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
