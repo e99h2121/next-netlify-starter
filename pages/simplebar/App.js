@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 
-class App extends Component {
+class app extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+      <div className="app">
+        <header className="app-header">
+          <h1 className="app-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+        <p className="app-intro">
+          To get started, edit <code>src/app.js</code> and save to reload.
         </p>
         <SimpleBar style={{ height: '300px', color: "red" }}>
           {[...Array(50)].map((x, i) =>
@@ -22,4 +22,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default app;
